@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="miliseconds">00</span>
+        </div>
+        <div>
+            <span id="start" onclick="start()">Start</span>
+            <span id="stop" onclick="stop()">Stop</span>
+        </div>
+    </div>
+    <script>
+        var intervalId;
+        var startButton = document.getElementById('start');
+        var stopButton = document.getElementById('stop');
+        function start() {
+            startButton.style.display = 'none';
+            stopButton.style.display = 'inline';
+            var minutesContainer = document.getElementById("minutes");
+            var secondsContainer = document.getElementById("seconds");
+            var milisecondsContainer = document.getElementById("miliseconds");
+            var miliseconds = 0;
+            var seconds = 0;
+            var minutes = 0;
+            intervalId = setInterval(function(){
+                miliseconds++;
+                if (miliseconds == 10) {
+                    miliseconds = 0;
+                    seconds++;
+                }
+                milisecondsContainer.innerHTML = miliseconds;
+                if (seconds == 60) {
+                    seconds = 0
+                    minutes++;
+                    minutesContainer.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                }
+                secondsContainer.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+            }, 100);
+        }
+        function stop(){
+            startButton.style.display = 'inline';
+            stopButton.style.display = 'none';
+            clearInterval(intervalId);
+        }
+    </script>
+</body>
+</html>

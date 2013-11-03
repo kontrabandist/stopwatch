@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    color: #ffffff;
+}
+.main{
+    background: #000000;
+    height:100%;
+    width:100%;
+}
+.center span{
+    height: 100%;
+    text-align: center;
+    font-size: 600%;
+}
+#minutes{
+    font-size: 600%;
+}
+#seconds{
+    background: #123432;
+    font-size: 600%;
+}
+#miliseconds{
+    font-size: 300%;
+}
+#start{
+    font-size: 300%;
+}
+#stop{
+    font-size: 300%;
+    color: red;
+    display: none;
+}
