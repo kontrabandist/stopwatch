@@ -7,4 +7,5 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Dima freeldi
     </author>
+    <icon src="icon.png" />
 </widget>
