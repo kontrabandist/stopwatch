@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget id = "com.stopwatch.freeldi" versionCode = "10" version = "1.0.0">
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.hello-world"
+        version   = "0.0.1">
+
     <name>Simple StopWatch</name>
     <description>
         This is simple stopwatch for Android
@@ -7,5 +11,13 @@
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Dima freeldi
     </author>
-    <icon src="icon.png" />
+
+    <gap:platform name="android" />
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference name="fullscreen" value="true" />
+    <preference name="orientation" value="default" />
+    <preference name="permissions" value="none"/>
+
+    <icon src="icon.png" width="128" height="128"/>
 </widget>
